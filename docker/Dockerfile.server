@@ -1,0 +1,6 @@
+FROM python:3.9.2-alpine
+
+ENV PYTHONUNBUFFERED 1
+
+COPY code/server.py /
+CMD ["python", "/server.py"]

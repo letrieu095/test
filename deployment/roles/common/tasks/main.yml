@@ -1,0 +1,9 @@
+- name: Sync code
+  synchronize:
+    src={{ inventory_dir }}/..
+    dest=/srv/ghtk
+    rsync_path="sudo rsync"
+  tags:
+    - rsync
+    - client
+    - server

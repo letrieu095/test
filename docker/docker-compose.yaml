@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  server:
+    container_name: server
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.server
+    network_mode: host
+    restart: unless-stopped
+
+  client:
+    container_name: client
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.client
+    network_mode: host
+    restart: unless-stopped

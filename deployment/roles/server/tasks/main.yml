@@ -1,0 +1,6 @@
+- name: Build server container
+  shell: |
+    cd /srv/ghtk/docker/ &&
+    docker-compose up -d --build server
+  become: yes
+  tags: server
