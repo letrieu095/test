@@ -17,5 +17,5 @@ Written in [Python](https://www.python.org/)
 - Run: 
 
 ```bash 
-$ ansible-playbook -i deployment/hosts deployment/site.yml -u <user> -l <ip_host/group> -t <client/server>
+$ ansible-playbook -i deployment/hosts deployment/site.yml -u <user> -l <ip_host/group> -t <client/server> --vault-password-file=<path_to_vault_pass>
 ```

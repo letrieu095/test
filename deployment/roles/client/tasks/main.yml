@@ -1,5 +1,6 @@
 - name: Build client container
   shell: |
+    docker pull trieulevan/client &&
     cd /srv/ghtk/docker/ &&
     docker-compose up -d --build client
   become: yes

@@ -1,9 +1,8 @@
-- name: Sync code
-  synchronize:
-    src={{ inventory_dir }}/..
-    dest=/srv/ghtk
-    rsync_path="sudo rsync"
+- name: Copy docker-compose file
+  template:
+    src={{ inventory_dir }}/../docker/docker-compose.yaml
+    dest=/srv/ghtk/docker
   tags:
-    - rsync
+    - update_config
     - client
     - server
